@@ -1,0 +1,2 @@
+# Clear-Fox
+A custom Firefox modification that allows a better view of installed themes. Provides more space to the right side of the navigator and changes the opacity of toolbars, favicons, bookmarks and icons to be more transparent so the theme can show as true as it can be without the default browser colors or gradients overlapping over the image. It has a better effect if the search bar is hidden.
