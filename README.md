@@ -9,3 +9,4 @@ A custom Firefox modification that allows a better view of installed themes. Pro
  - Paste the copied chrome folder, overwrite or backup original folder
  - Open Firefox or do a restart if it was already opened.
  - The changes should be applied now.
+ - Enjoy!
