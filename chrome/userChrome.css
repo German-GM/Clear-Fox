@@ -1,0 +1,98 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Change font and opacity of active tab   */  
+tab{
+	font-size: 12px !important;
+	font-family: Verdana !important;
+}
+tab[selected="true"] {
+   opacity: 1;  
+}
+
+  /* Change opacity of a non-active tab */  
+ tab:not([selected="true"]) {
+   opacity: 0.4;
+}
+
+/* add-ons and tools icon opacity */
+.toolbarbutton-icon {
+	opacity: 0.2;
+}
+#downloads-button{
+	opacity: 0.2;
+}
+
+/* General browser elements transparency */
+#personal-bookmarks{
+	 background-color: transparent !important;
+}
+tabs.tabbrowser-tabs#tabbrowser#tabs{
+	background-color: transparent !important;
+}
+
+.tabbrowser-tab[selected="true"]{
+	background: transparent !important;
+	/*color: #ffffff !important;*/
+    text-shadow: #000000 0px 0px 2px !important;
+	font-weight: bold;
+}
+#TabsToolbar, #browser-bottombox, #status-bar, #status-bar > *, #nav-bar, #PersonalToolbar, #addon-bar {
+	background: transparent !important;
+	/*color: #ffffff !important;
+	-moz-appearance: none !important;
+	border: #000000 !important;*/
+}
+.chromeclass-directories *, #bookmarksPanel * {
+    /*color: #ffffff !important;*/
+    font-family: Verdana !important;
+    /*text-shadow: #81F0F6 0px 0px 1px !important;    */
+}
+#main-window[inFullscreen="true"]{
+	-moz-appearance: -moz-win-borderless-glass !important;
+	background: none !important;
+}
+#main-window[stylish-url="about:blank"]:not([onclose^="PrintUtils"]):not([title^="View Source Chart"]) #content browser:not([src]){ 
+	opacity: 0 !important;
+}
+#appcontent,#content > tabbox > tabpanels {
+  background-color: transparent !important;
+}
+
+#PersonalToolbar {
+	background: transparent !important; 
+	opacity: 0.5;
+}
+
+/* Remove Edit menu (if you already use all the keyboard shortcuts) */
+#edit-menu { display: none !important; }
+
+/* Remove Back button when there’s nothing to go Back to */
+#back-button[disabled="true"] { display: none; }
+
+/* Changes the URL bar (or awesome bar) opacity and width */
+#urlbar {
+	opacity: 0.5; 
+	background: rgba(0, 0, 0, 0); 
+	max-width: 1300px !important; /*1024*/
+}
+
+/* URL bar container, it has the former and the add-on icons */
+#urlbar-container {max-width: 1300px !important;}
+
+/*#urlbar:hover {opacity: 0.5;}*/
+#urlbar[focused="true"] {opacity: 0.7;}
+
+/* Changes the search bar opacity */
+#searchbar .searchbar-textbox {opacity: 0.2; background-color: transparent;}
+#searchbar .searchbar-textbox:hover {opacity: 0.4;}
+#searchbar .searchbar-textbox[focused="true"] {opacity: 0.6;}
+
+/* Changes favicons opacity */
+.tab-icon-image  {opacity: 0.6 !important; }
+.tab-icon-image[selected="true"]  {opacity: 1 !important; }
+
+/* Allows to see all the skin theme by increasing the height of the navigator area */
+/*#navigator-toolbox { min-height: 190px !important; }*/
+
+/*menubar, toolbox, toolbar, .tabbrowser-tabs {
+opacity: 0.2; }*/
