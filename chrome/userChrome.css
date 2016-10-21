@@ -1,6 +1,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* Change font and opacity of active tab   */  
+/* Cambiar el color de la tab activa   */  
 tab{
 	font-size: 12px !important;
 	font-family: Verdana !important;
@@ -9,12 +9,12 @@ tab[selected="true"] {
    opacity: 1;  
 }
 
-  /* Change opacity of a non-active tab */  
+  /* Cambiar el color de la tab normal */  
  tab:not([selected="true"]) {
    opacity: 0.4;
 }
 
-/* add-ons and tools icon opacity */
+/* Iconos de extensiones y herramientas */
 .toolbarbutton-icon {
 	opacity: 0.2;
 }
@@ -22,7 +22,7 @@ tab[selected="true"] {
 	opacity: 0.2;
 }
 
-/* General browser elements transparency */
+/* Transparencia del navegador general */
 #personal-bookmarks{
 	 background-color: transparent !important;
 }
@@ -33,7 +33,7 @@ tabs.tabbrowser-tabs#tabbrowser#tabs{
 .tabbrowser-tab[selected="true"]{
 	background: transparent !important;
 	/*color: #ffffff !important;*/
-    text-shadow: #000000 0px 0px 2px !important;
+    /*text-shadow: #000000 0px 0px 2px !important;*/
 	font-weight: bold;
 }
 #TabsToolbar, #browser-bottombox, #status-bar, #status-bar > *, #nav-bar, #PersonalToolbar, #addon-bar {
@@ -69,30 +69,119 @@ tabs.tabbrowser-tabs#tabbrowser#tabs{
 /* Remove Back button when there’s nothing to go Back to */
 #back-button[disabled="true"] { display: none; }
 
-/* Changes the URL bar (or awesome bar) opacity and width */
+/* Cambia la opacidad de la barra URL principal (awesome bar) */
 #urlbar {
 	opacity: 0.5; 
 	background: rgba(0, 0, 0, 0); 
-	max-width: 1300px !important; /*1024*/
+	max-width: 650px !important; /*1024*/
 }
 
-/* URL bar container, it has the former and the add-on icons */
-#urlbar-container {max-width: 1300px !important;}
+/* El contenedor de la barra URL, contiene ésta última más los iconos de complementos */
+#urlbar-container {max-width: 650px !important;}
 
 /*#urlbar:hover {opacity: 0.5;}*/
 #urlbar[focused="true"] {opacity: 0.7;}
 
-/* Changes the search bar opacity */
+/* Cambia la opacidad de la barra de búsqueda que está junto a la barra URL */
 #searchbar .searchbar-textbox {opacity: 0.2; background-color: transparent;}
 #searchbar .searchbar-textbox:hover {opacity: 0.4;}
 #searchbar .searchbar-textbox[focused="true"] {opacity: 0.6;}
 
-/* Changes favicons opacity */
+/* Cambia la opacidad de los favicons */
 .tab-icon-image  {opacity: 0.6 !important; }
 .tab-icon-image[selected="true"]  {opacity: 1 !important; }
 
-/* Allows to see all the skin theme by increasing the height of the navigator area */
+/* Permite ver todo el skin de tema */
 /*#navigator-toolbox { min-height: 190px !important; }*/
 
 /*menubar, toolbox, toolbar, .tabbrowser-tabs {
 opacity: 0.2; }*/
+
+#main-window[windowtype="navigator:browser"] {
+	background-color: transparent !important;
+}
+.titlebar-button {
+	/*background-color: transparent !important;*/
+	opacity: 0 !important;
+	transition: background-color 0.2s ease;
+}
+.titlebar-button > .toolbarbutton-icon {
+	/*list-style-image: none;*/
+}
+.titlebar-button:hover {
+	opacity: 1 !important;
+	/*background-color: rgba(0, 0, 0, 0.15) !important;
+	color: white;*/
+}
+#titlebar-close:hover {
+	opacity: 1 !important;
+	background-color: rgba(232, 17, 35, 0.3) !important; /*#E81123*/
+}
+#titlebar-close:hover > .toolbarbutton-icon {
+	/*list-style-image: url("chrome://browser/skin/caption-buttons.svg#close-white") !important;
+	color: white;*/
+}
+
+/* Remove the Hamburger Button */
+#PanelUI-menu-button {
+	opacity: 0 !important;
+	/*display: none;*/
+}
+#PanelUI-menu-button:hover {
+	opacity: 0.5 !important;
+}
+
+/* Remove the Hamburger Button Border */
+@-moz-document url("chrome://browser/content/browser.xul") {
+	#PanelUI-button {
+		/*background-position: 100% 0, calc(100% - 1px) 0, calc(100% - 2px) 0;*/
+		border: none !important;
+		transition: background-color 0.2s ease;
+	}
+	#PanelUI-button:hover {
+		background-color: rgba(0, 0, 0, 0.15) !important;
+	}
+	
+}
+
+/* Make Link Box Transparent */
+.statuspanel-label[value=""] {display: none !important;}
+.statuspanel-label:not([value=""]){opacity: 1 !important;
+-moz-transition-property: opacity: 0 !important;
+-moz-transition-delay: 2000ms !important;}
+#main-window[sizemode="normal"]:not([inFullscreen])
+.statuspanel-inner{margin: 0 1px !important;}
+.statuspanel-label {color: Windows Text !important;
+border-color: Transparent !important;
+background: rgba(255,255,255,0.5) !important; /*Transparent !important;*/
+}
+
+#nav-bar {
+   background-color:transparent !important;
+   background-image:none !important;
+   border-color:transparent !important;
+   box-shadow:none !important;
+} 
+/*.tabbrowser-tab:not([pinned]):hover
+.tab-icon-image,
+.tabbrowser-tab:not([pinned]):hover
+.tab-throbber
+{
+  display: none !important;
+}
+#urlbar
+{
+  border-style: none !important;
+}
+#star-button
+{
+  display: none !important;
+}
+#identity-box
+{
+  display: none;
+}
+#navigator-toolbox::after
+{
+  height: 0px !important;
+}*/

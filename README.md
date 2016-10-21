@@ -1,12 +1,12 @@
 # Clear-Fox
-A custom Firefox modification that allows a better view of installed themes. Provides more space to the right side of the navigator and changes the opacity of toolbars, favicons, bookmarks and icons to be more transparent so the theme can show as true as it can be without the default browser colors or gradients overlapping over the image. It has a better effect if the search bar is hidden and if the OS is Windows 10.
+A custom Firefox modification that allows a better view of installed themes. Provides more space to the right side of the browser and changes the opacity of toolbars, favicons, bookmarks and icons to be more transparent so the theme can show as clear as it can be without the default browser colors or gradients overlapping over the image. It has a better effect if the search bar is hidden and if the OS is Windows 10.
 
 # Installation [Windows]
  - Copy the chrome folder from this repository.
  - Go to the file explorer.
  - Type %appdata% into the address bar.
  - Look for a folder called Mozilla/Firefox/Profiles/numbers_and_letters.default (the numbers_and_letters part vary for each profile).
- - Paste the copied chrome folder, overwrite or backup original folder
+ - Paste the copied chrome folder, overwrite or backup original folder if exists
  - Open Firefox or do a restart if it was already opened.
  - The changes should be applied now.
  - Enjoy!
