@@ -5,7 +5,7 @@ A custom Firefox modification that allows a better view of installed themes. Pro
  - Copy the chrome folder from this repository.
  - Go to the file explorer.
  - Type %appdata% into the address bar.
- - Look for a folder called Mozilla/Firefox/Profiles/numbers_and_letters.default (the numbers_and_letters part vary for each profile).
+ - Look for a folder called Mozilla/Firefox/Profiles/numbers_and_letters.default (the numbers_and_letters part vary for each profile) and go inside.
  - Paste the copied chrome folder, overwrite or backup original folder if exists
  - Open Firefox or do a restart if it was already opened.
  - The changes should be applied now.
