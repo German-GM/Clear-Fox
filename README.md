@@ -1,5 +1,5 @@
 # Clear-Fox
-A custom Firefox modification that allows a better view of installed themes. Provides more space to the right side of the browser and changes the opacity of toolbars, favicons, bookmarks and icons to be more transparent so the theme can show as clear as it can be without the default browser colors or gradients overlapping over the image. It has a better effect if the search bar is hidden and if the OS is Windows 10.
+A custom Firefox modification that allows a better view of installed themes. Provides more space to the right side of the browser and changes the opacity of toolbars, favicons, bookmarks and icons to be more transparent so the theme can show as clear as it can be without the default browser colors or gradients overlapping over the image. It has a better effect if the search bar is hidden.
 
 # Installation [Windows]
  - Copy the chrome folder from this repository.
