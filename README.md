@@ -11,8 +11,9 @@ Clear-Fox is a small Firefox UI modification that allows a better view of instal
  * The changes should be applied now.
  * Enjoy!
 
- # Screenshot
- ![clear-fox](screenshot.png)
+# Screenshot
+![clear-fox][cf]
+[cf]: screenshot.PNG
 
  ### Note
  To revert changes just delete the chrome folder and restart Firefox if it was already opened.
