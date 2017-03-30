@@ -1,6 +1,97 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/*disable anti-aliasing*/
+/*img { image-rendering: -moz-crisp-edges; }*/
 
-/* Cambiar el color de la tab activa   */  
+/*.tabbrowser-arrowscrollbox > .scrollbutton-up, .tabbrowser-arrowscrollbox > .scrollbutton-down {
+	display: none;
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator, .tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator {
+	display: none;
+}
+*/
+window:not([chromehidden~="toolbar"]) #urlbar-wrapper:hover:not([switchingtabs]) > #forward-button[disabled] + #urlbar > #identity-box {
+	width: 50px;
+}
+
+.tabs-newtab-button {
+	display: none;
+}
+
+.toolbarbutton-badge {
+	opacity: 0.3;
+}
+
+#back-button > .toolbarbutton-icon {
+    border-radius: 10px !important;
+    padding: 6px !important;
+}
+
+#back-button {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	-moz-image-region: rect(0px, 38px, 16px, 16px) !important;
+}
+
+#identity-box {
+	width: 50px;
+}
+
+#nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker{
+	opacity: 0.3;
+}
+
+.scrollbutton-down {
+	display: none;
+}
+ .scrollbutton-up {
+	display: none;
+}
+
+#new-tab-button {
+	display: none;
+}
+
+#alltabs-button { 
+	opacity: 0;
+}
+#alltabs-button:hover { 
+	opacity: 0.3;
+}
+
+#downloads-button {
+	opacity: 0.2;
+}
+
+.tabbrowser-tab:not([pinned]) {
+	max-width: 100px !important;
+	min-width: 100px !important;
+}
+
+#personal-bookmarks .bookmark-item > .toolbarbutton-text { 
+	opacity: 0.7 !important;
+	font-size: 8pt !important;
+	/*font-weight: bold; */
+}
+
+#personal-bookmarks .bookmark-item { 
+	/*height:24px !important; */
+	width: 80px !important; 
+}
+
+/* Sets about:blank to have other color than the default white */
+#tab-view-deck #browser tabbrowser#content{
+	background-color:rgb(28, 33, 38) !important;
+}
+
+/* Shows more results in the search list (URL bar) */
+#PopupAutoCompleteRichResult .autocomplete-richlistbox
+{
+height: auto !important;
+max-height: 760px !important;
+}
+
+/* Changes active tab color   */  
 tab{
 	font-size: 12px !important;
 	font-family: Verdana !important;
@@ -9,12 +100,12 @@ tab[selected="true"] {
    opacity: 1;  
 }
 
-  /* Cambiar el color de la tab normal */  
+  /* Changes normal tab color */  
  tab:not([selected="true"]) {
    opacity: 0.4;
 }
 
-/* Iconos de extensiones y herramientas */
+/* Extensions and Tools icons */
 .toolbarbutton-icon {
 	opacity: 0.2;
 }
@@ -69,29 +160,30 @@ tabs.tabbrowser-tabs#tabbrowser#tabs{
 /* Remove Back button when there’s nothing to go Back to */
 #back-button[disabled="true"] { display: none; }
 
-/* Cambia la opacidad de la barra URL principal (awesome bar) */
+/* Changes the opacity of the main URL bar (awesome bar) */
 #urlbar {
 	opacity: 0.5; 
 	background: rgba(0, 0, 0, 0); 
 	max-width: 650px !important; /*1024*/
+	border: 1px solid silver !important;
 }
 
-/* El contenedor de la barra URL, contiene ésta última más los iconos de complementos */
+/* URL bar container, it contains the former plus the extensions's icons */
 #urlbar-container {max-width: 650px !important;}
 
 /*#urlbar:hover {opacity: 0.5;}*/
 #urlbar[focused="true"] {opacity: 0.7;}
 
-/* Cambia la opacidad de la barra de búsqueda que está junto a la barra URL */
+/* Changes opacity of search bar */
 #searchbar .searchbar-textbox {opacity: 0.2; background-color: transparent;}
 #searchbar .searchbar-textbox:hover {opacity: 0.4;}
 #searchbar .searchbar-textbox[focused="true"] {opacity: 0.6;}
 
-/* Cambia la opacidad de los favicons */
+/* Changes opacity of favicons */
 .tab-icon-image  {opacity: 0.6 !important; }
 .tab-icon-image[selected="true"]  {opacity: 1 !important; }
 
-/* Permite ver todo el skin de tema */
+/* Allow to see the whole theme skin */
 /*#navigator-toolbox { min-height: 190px !important; }*/
 
 /*menubar, toolbox, toolbar, .tabbrowser-tabs {
@@ -157,11 +249,13 @@ background: rgba(255,255,255,0.5) !important; /*Transparent !important;*/
 }
 
 #nav-bar {
-   background-color:transparent !important;
-   background-image:none !important;
-   border-color:transparent !important;
-   box-shadow:none !important;
+   background-color: transparent !important;
+   background-image: none !important;
+   border-color: transparent !important;
+   box-shadow: none !important;
+   padding-top: 7px !important;
 } 
+#menu_FileQuitItem { list-style-image: none !important;}
 /*.tabbrowser-tab:not([pinned]):hover
 .tab-icon-image,
 .tabbrowser-tab:not([pinned]):hover
