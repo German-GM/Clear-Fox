@@ -10,9 +10,9 @@
 	display: none;
 }
 */
-window:not([chromehidden~="toolbar"]) #urlbar-wrapper:hover:not([switchingtabs]) > #forward-button[disabled] + #urlbar > #identity-box {
+/*window:not([chromehidden~="toolbar"]) #urlbar-wrapper:hover:not([switchingtabs]) > #forward-button[disabled] + #urlbar > #identity-box {
 	width: 50px;
-}
+}*/
 
 .tabs-newtab-button {
 	display: none;
@@ -21,6 +21,9 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper:hover:not([switchingtabs])
 .toolbarbutton-badge {
 	opacity: 0.3;
 }
+
+/* Remove Back button when there’s nothing to go Back to (comentar los sig. 3 #back-button en nightly) */
+/*#back-button[disabled="true"] { display: none; }
 
 #back-button > .toolbarbutton-icon {
     border-radius: 10px !important;
@@ -31,11 +34,15 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper:hover:not([switchingtabs])
 	padding-top: 0px !important;
 	padding-bottom: 0px !important;
 	-moz-image-region: rect(0px, 38px, 16px, 16px) !important;
+}*/
+
+window[sizemode="maximized"] .tabbrowser-tab[first-tab="true"] .tab-background[selected="true"]{
+  border-left-width:0px !important;
 }
 
-#identity-box {
+/*#identity-box {
 	width: 50px;
-}
+}*/
 
 #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker{
 	opacity: 0.3;
@@ -63,10 +70,11 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper:hover:not([switchingtabs])
 	opacity: 0.2;
 }
 
-.tabbrowser-tab:not([pinned]) {
+/* Use "Custom Tab Width" extension */
+/*.tabbrowser-tab:not([pinned]) {
 	max-width: 100px !important;
 	min-width: 100px !important;
-}
+}*/
 
 #personal-bookmarks .bookmark-item > .toolbarbutton-text { 
 	opacity: 0.7 !important;
@@ -157,19 +165,18 @@ tabs.tabbrowser-tabs#tabbrowser#tabs{
 /* Remove Edit menu (if you already use all the keyboard shortcuts) */
 #edit-menu { display: none !important; }
 
-/* Remove Back button when there’s nothing to go Back to */
-#back-button[disabled="true"] { display: none; }
-
 /* Changes the opacity of the main URL bar (awesome bar) */
 #urlbar {
 	opacity: 0.5; 
 	background: rgba(0, 0, 0, 0); 
-	max-width: 650px !important; /*1024*/
+	/*max-width: 650px !important; */
 	border: 1px solid silver !important;
 }
 
 /* URL bar container, it contains the former plus the extensions's icons */
-#urlbar-container {max-width: 650px !important;}
+#urlbar-container {
+	/*max-width: 650px !important;*/
+}
 
 /*#urlbar:hover {opacity: 0.5;}*/
 #urlbar[focused="true"] {opacity: 0.7;}
@@ -221,6 +228,16 @@ opacity: 0.2; }*/
 }
 #PanelUI-menu-button:hover {
 	opacity: 0.5 !important;
+}
+
+/* Remove the Overflow Button */
+#nav-bar-overflow-button {
+	opacity: 0.5 !important;
+	/*display: none;*/
+}
+#nav-bar-overflow-button:hover {
+	opacity: 1 !important;
+	/*display: none;*/
 }
 
 /* Remove the Hamburger Button Border */
@@ -279,3 +296,22 @@ background: rgba(255,255,255,0.5) !important; /*Transparent !important;*/
 {
   height: 0px !important;
 }*/
+
+
+/* don't forget to say "thanks emmy!" <3 */
+ 
+photonpanelmultiview .panel-subview-body{margin:0!important}
+#appMenu-edit-controls,#appMenu-edit-controls+toolbarseparator{display:none}
+#appMenu-popup .panel-arrowcontent{margin:4px 4px 0!important;padding:0!important}
+#appMenu-popup .panel-subview-body{margin:-6px 0}
+#appMenu-mainView{padding:0!important}
+photonpanelmultiview .PanelUI-subView .toolbaritem-combined-buttons>.subviewbutton:not(#appMenu-zoomReset-button):not(#appMenu-fxa-icon){padding:10px!important}
+#appMenu-zoom-controls{margin:-6px 0;margin-inline-end:0!important}
+#appMenu-zoomReset-button{border-radius:0!important;border-width:0 1px 0 1px!important;border-color:var(--arrowpanel-dimmed)!important;padding:10px 10px 9px!important;margin-inline-start:0!important}
+#appMenu-zoomEnlarge-button{margin-inline-start:0!important}
+#appMenu-quit-button{padding:10px!important;margin-top:-6px!important}
+#appMenu-fxa-container{margin-bottom:-6px;margin-inline-end:0!important}
+#appMenu-fxa-container toolbarseparator[orient='vertical'],#appMenu-zoom-controls toolbarseparator[orient='vertical']{margin-inline-start:0!important;margin-inline-end:0!important}
+#appMenu-fxa-label{padding:10px 28px!important}
+#appMenu-fxa-avatar{border-radius:50%}
+#appMenu-fxa-icon{padding:11px 11px 10px 10px!important}

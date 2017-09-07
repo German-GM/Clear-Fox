@@ -1,0 +1,45 @@
+@-moz-document url-prefix(about:home) {
+    #launcher {
+        display: none !important;
+    }
+
+    #searchIconAndTextContainer {
+        height: 30px;
+    }
+
+    #searchIcon {
+        width: 20px;
+        height: 20px;
+
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 2%;
+    }
+
+    #searchText {
+        font-size: 90%;
+        border-radius: 4px 0px 0px 4px;
+    }
+
+    body {
+        background: linear-gradient(46deg, #D100F9 0%, #00EF78 100%);
+    }
+
+    #searchSubmit {
+        border-radius: 0px 4px 4px 0px;
+    }
+}
+
+@-moz-document url-prefix(about:newtab) {
+    body {
+        background: linear-gradient(46deg, #D100F9 0%, #00EF78 100%) !important;
+    }
+
+    .section-title {
+        color: rgb(32, 32, 32) !important;
+    }
+
+    .search-wrapper {
+        height: 30px !important;
+    }
+}
